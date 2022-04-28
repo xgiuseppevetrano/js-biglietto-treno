@@ -15,8 +15,11 @@ const ticketPriceOver65 = Number(ticketPrice * 0.4);
 
 if ( age < 18 ) {
     console.log(ticketPriceUnder18.toFixed(2));
+    document.getElementById('ticket-price').innerHTML = `${ticketPriceUnder18} €`;
 } else if ( age >= 65 ) {
     console.log(ticketPriceOver65.toFixed(2));
+    document.getElementById('ticket-price').innerHTML = `${ticketPriceOver65} €`;
 } else {
     console.log(ticketPrice.toFixed(2));
+    document.getElementById('ticket-price').innerHTML = `${ticketPrice} €`;
 }
